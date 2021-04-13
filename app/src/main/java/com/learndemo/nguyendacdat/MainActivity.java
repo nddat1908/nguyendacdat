@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initView();
+        db = AppDatabase.getAppDatabase(this);
 
     }
 
@@ -56,11 +58,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(this, "Please enter quantity", Toast.LENGTH_LONG).show();
             return;
         }
-
+        insertProduct();
+        onView();
     }
 
     private void onView(){
-        insertProduct();
         Intent intent = new Intent(MainActivity.this, ActivityListProduct.class);
         startActivity(intent);
     }

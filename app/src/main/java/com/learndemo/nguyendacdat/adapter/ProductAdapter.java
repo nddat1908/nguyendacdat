@@ -23,10 +23,10 @@ public class ProductAdapter extends RecyclerView.Adapter {
         this.listProduct = listProduct;
     }
 
-    public void ReloadData(List<ProductEntity> list){
-        this.listProduct = list;
-        this.notifyDataSetChanged();
-    }
+//    public void ReloadData(List<ProductEntity> list){
+//        this.listProduct = list;
+//        this.notifyDataSetChanged();
+//    }
 
     @NonNull
     @Override
@@ -55,7 +55,6 @@ public class ProductAdapter extends RecyclerView.Adapter {
 
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
-
             tvId = itemView.findViewById(R.id.tvId);
             tvName = itemView.findViewById(R.id.tvName);
             tvQuantity = itemView.findViewById(R.id.tvQuantity);

@@ -8,8 +8,9 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
 import com.learndemo.nguyendacdat.dao.ProductDao;
+import com.learndemo.nguyendacdat.entity.ProductEntity;
 
-@Database(entities = {Entity.class},version = 1)
+@Database(entities = {ProductEntity.class},version = 1)
 public abstract class AppDatabase extends RoomDatabase {
     private static AppDatabase appDatabase;
 
